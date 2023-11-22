@@ -90,5 +90,5 @@ create table if not exists user_phone(
     user_id integer not null,
     token text not null,
     
-    constraint fk_user_phone_user foreign key(user_id) references user(id)
+    constraint fk_user_phone_user foreign key(user_id) references authorization_user(id)
 );

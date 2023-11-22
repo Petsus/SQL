@@ -28,7 +28,9 @@ create table if not exists animal(
     image text,
     user_id integer not null,
     race_id integer not null,
+    address_id integer not null,
 
-    constraint fk_animal_user foreign key(user_id) references user(id) on delete cascade,
-    constraint fk_animal_race foreign key(race_id) references race(id) on delete cascade
+    constraint fk_animal_user foreign key(user_id) references authorization_user(id) on delete cascade,
+    constraint fk_animal_race foreign key(race_id) references race(id) on delete cascade,
+    constraint fk_animal_address foreign key(address_id) references address(id)
 );

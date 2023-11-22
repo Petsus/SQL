@@ -63,8 +63,8 @@ create table if not exists notification(
     image text,
     animal_id integer,
     user_id integer,
-    notification_id varchar(150) not null unique,
+    notification_id varchar(150),
     
-    constraint fk_notification_user foreign key(user_id) references user(id),
+    constraint fk_notification_user foreign key(user_id) references authorization_user(id),
     constraint fk_notification_animal foreign key(animal_id) references animal(id)
 );

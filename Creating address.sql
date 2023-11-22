@@ -8,7 +8,7 @@ INSERT INTO state(created_at, updated_at, name, initials, ibge_id)
 SELECT @stateId := id FROM state ORDER BY id DESC LIMIT 1;
 
 INSERT INTO city(created_at, updated_at, name, ibge_id, state_id)
-	VALUES (NOW(), NOW(), 'Sorocaba', 1, @stateId);
+	VALUES (NOW(), NOW(), 'Sorocaba', 3552205, @stateId);
     
 # Inserts join city - town hall user
 SELECT @cityId := id FROM city ORDER BY id DESC LIMIT 1;
